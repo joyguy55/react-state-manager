@@ -15,10 +15,11 @@ npm install --save state-manager
 ```jsx
 import React, { Component } from 'react'
 
-import { useMyHook } from 'state-manager'
+import { ImpersonationsStateHook } from 'state-manager'
 
 const Example = () => {
-  const example = useMyHook()
+  // default must be an array like structure
+  const {impersonations, syncImpersonations} = ImpersonationsStateHook(default)
   return (
     <div>{example}</div>
   )
